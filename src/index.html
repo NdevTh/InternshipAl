@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styleOut.css">
+    <link rel="stylesheet" href="./css/monStyle.css">
+    <script src="echart/echarts.js"></script> 
+    <title>Sherlock</title>
+</head>
+<body class="flex flex-col h-full">
+  <header >
+    <nav class="flex text-xl items-center justify-between content-center p-4">
+        <ul class="flex  justify-center  p-1">
+          <li><a class="mx-3.5 text-blue-600 font-bold text-lg" href="./page/sherlock.html">Sherlock</a></li>
+          <li><a class="mx-3.5 text-blue-600 font-bold text-lg"href="./page/trial.html">Trial</a></li>
+          <li><a class="mx-3.5 text-blue-600 font-bold text-lg"href="./page/renewal.html">Renewal</a></li>
+          <li><a class="mx-3.5 text-blue-600 font-bold text-lg" href="./page/products.html">Products</a></li>
+          <li><a class="mx-3.5 text-blue-600 font-bold text-lg" href="./page/glossary.html">Glossary</a></li>
+        </ul>
+        <div class="flex text-center rounded-full p-1">         
+         <!-- <img class="max-w-full h-auto" src="./image/loupe.png" alt=""></img> -->
+         <input class="flex h-12 border rounded-full p-1 text-center " type="search" placeholder="search a company ">
+        </div>
+        <div class="items-center flex">
+        <div class=" p-1">Welcome, <span class="font-bold px-5">Dany Jennervé</span></div>
+          <button type="submit" class="border text-white h-12 w-24 bg-blue-600 rounded-md">Logout</button>
+        </div>
+    </nav>
+  </header>
+<main class="flex flex-col bg-blue-100 h-full ">
+  <section class="flex justify-between items-center text-xl pt-4">
+    <h2 class="font-bold px-8 h-11">
+      Sherlock Dashboard
+    </h2>
+    <ul class="flex h-8 mx-5 items-center pr-3">
+      <p class="pl-3 pr-3" href=""><li class="pl-3 pr-3" >Filters</li></p>
+      <select  class=" m-2 border border-black flex items-center pl-3 h-12 pr-3" name="Region" id="">
+        <option  value="Region1">Région1</option>
+        <option value="Region2">Region2</option>
+        <option value="Region3">Région3</option>
+        <option value="Region4">Région4</option>
+      </select>
+      <select   class="m-2 border border-black flex items-center pl-3 h-12 pr-3"  name="Region" id="">
+        <option value="Cluster1">Cluster1</option>
+        <option value="Cluster2">Cluster2</option>
+        <option value="Cluster3">Cluster3</option>
+        <option value="Cluster4">Cluster4</option>
+      </select>
+      <select  class="m-2 border border-black flex items-center pl-3 h-12 pr-3" name="Region" id="">
+        <option value="Country1">Country 1</option>
+        <option value="Country2">Country 2</option>
+        <option value="Country3">Country 3</option>
+        <option value="Country4">Country 4</option>
+      </select>
+      <select  class="m-2 border border-black flex items-center pl-3 h-12 pr-3" name="Region" id="">
+        <option value="State1">State 1</option>
+        <option value="State2">State 2</option>
+        <option value="State3">State 3</option>
+        <option value="State4">State 4</option>
+      </select>
+      <select  class=" m-2 border border-black flex items-center pl-3 h-12 pr-3" name="Region" id="">
+        <option value="bp1">BP-1 1</option>
+        <option value="bp2">BP-1 2</option>
+        <option value="bp3">BP-1 3</option>
+        <option value="bp4">BP-1 4</option>
+      </select>
+      <select  class=" m-2 border border-black flex items-center pl-3 h-12 pr-3" name="Region" id="">
+        <option value="bp21">BP-21 1</option>
+        <option value="bp22">BP-21 2</option>
+        <option value="bp23">BP-21 3</option>
+        <option value="bp24">BP-21 4</option>
+      </select>
+      <select  class=" m-2 border border-black flex items-center pl-3 h-12 pr-3" name="Region" id="">
+        <option value="CSM1">CSM 1</option>
+        <option value="CSM2">CSM 2</option>
+        <option value="CSM3">CSM 3</option>
+        <option value="CSM4">CSM 4</option>
+      </select>
+      <select  class=" m-2 border border-black flex items-center pl-3 h-12 pr-3" name="Region" id="">
+        <option value="KAM1">KAM 1</option>
+        <option value="KAM2">KAM 2</option>
+        <option value="KAM3">KAM 3</option>
+        <option value="KAM4">KAM 4</option>
+      </select>
+    </ul>
+  </section> 
+
+  <section class="h-full pt-20 px-8 grid grid-cols-4">
+    
+    <article id="mrr" class="font-bold flex flex-col m-3 border border-black bg-red-300 items-center " >
+      <h3 class=" justify-center" >
+    MMR 
+      </h3>
+      <div class="border bg-green-300 h-full w-full m-2 mx-2 px-2 border-black"> 
+       C'est ici on va mettre le graph
+        <script src="./echart/echarts.js">
+          // il ne marche pas et je ne sais pas pourquoi 
+
+        </script>
+      </div>
+
+         
+    </article>
+    <article class="flex m-3 font-bold bg-white items-start justify-center" ># of Billed Companies</article>
+    <article class="flex m-3 font-bold bg-white items-start  justify-center" >ARPU (Average Revenue Per User)</article>
+    <article class="flex m-3 font-bold bg-white text-center items-start justify-center" ># of Users and Licences </br> Register / Licences / Connected / Active
+    </article>
+    <article class="flex m-3 font-bold text-center bg-white items-start justify-center" >MRR <br>
+    Net new = Gross new - Gross churn</article>
+    <article class="flex m-3 font-bold text-center bg-white items-start justify-center" ># of Billed Companies <br>
+    Net new = Gross new - Gross churn</article>
+    <article class="flex m-3 font-bold text-center bg-white items-start justify-center" >Invoiced</article>
+    <article class="flex m-3 font-bold text-center bg-white items-start justify-center" ># of Users an Licences<br>
+      Registered / Licences / Connected / Active</article>  </section>
+</main>
+</body>
+</html>
