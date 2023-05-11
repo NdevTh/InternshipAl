@@ -680,6 +680,26 @@ video {
   height: 100%;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
+.h-72 {
+  height: 18rem;
+}
+
+.h-2\/4 {
+  height: 50%;
+}
+
+.h-48 {
+  height: 12rem;
+}
+
 .w-24 {
   width: 6rem;
 }

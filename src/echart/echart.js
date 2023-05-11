@@ -1,4 +1,4 @@
-import * as echarts from 'echarts';
+
 
 var chartDom = document.getElementById("mrr");
 var myChart = echarts.init(chartDom);
@@ -20,4 +20,5 @@ option = {
   ]
 };
 
-option && myChart.setOption(option);
+console.log("echart> settting option")
+if(option) myChart.setOption(option);
