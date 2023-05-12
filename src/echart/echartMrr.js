@@ -1,5 +1,3 @@
-
-
 var chartDom = document.getElementById("mrr");
 var myChart = echarts.init(chartDom);
 var option;
