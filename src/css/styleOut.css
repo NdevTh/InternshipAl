@@ -738,10 +738,6 @@ video {
   resize: both;
 }
 
-.grid-flow-row {
-  grid-auto-flow: row;
-}
-
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -967,7 +963,7 @@ video {
 }
 
 .square{
-  aspect-ratio: 2/1;
+  aspect-ratio: 1/1;
 }
 
 @media (min-width: 540px) {
@@ -987,10 +983,6 @@ video {
     display: grid;
   }
 
-  .xs\:h-32 {
-    height: 8rem;
-  }
-
   .xs\:h-auto {
     height: auto;
   }
@@ -1003,14 +995,6 @@ video {
     gap: 1rem;
   }
 
-  .xs\:self-start {
-    align-self: flex-start;
-  }
-
-  .xs\:self-end {
-    align-self: flex-end;
-  }
-
   .xs\:self-center {
     align-self: center;
   }
@@ -1020,12 +1004,54 @@ video {
   }
 
   .xs\:square{
-    aspect-ratio: 2/1;
+    aspect-ratio: 1/1;
   }
 }
 
 @media (min-width: 768px) {
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .md\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .md\:col-start-1 {
+    grid-column-start: 1;
+  }
+
+  .md\:col-start-2 {
+    grid-column-start: 2;
+  }
+
+  .md\:col-start-3 {
+    grid-column-start: 3;
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .md\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .md\:pr-12 {
+    padding-right: 3rem;
+  }
+
+  .md\:text-center {
+    text-align: center;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 }
