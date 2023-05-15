@@ -3,8 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer{
-
+@layer utilities{
+    .square{
+        aspect-ratio: 2/1;
+    }
 }
 @layer components{
  
