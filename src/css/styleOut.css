@@ -1025,10 +1025,6 @@ video {
     grid-column-start: 2;
   }
 
-  .md\:col-start-3 {
-    grid-column-start: 3;
-  }
-
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
