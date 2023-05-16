@@ -8,7 +8,7 @@ option = {
     trigger: 'axis'
   },
   legend: {
-    data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
+    data: ['Email', 'Union Ads',  'Direct', 'Search Engine']
   },
   grid: {
     left: '3%',
