@@ -1,4 +1,5 @@
-var chartDom = document.getElementById("mrr2");
+
+var chartDom = document.getElementById("bill");
 var myChart = echarts.init(chartDom);
 var option;
 
