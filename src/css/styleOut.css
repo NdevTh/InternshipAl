@@ -698,6 +698,14 @@ video {
   height: 100%;
 }
 
+.h-4 {
+  height: 1rem;
+}
+
+.h-9 {
+  height: 2.25rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -712,6 +720,22 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-1\/4 {
+  width: 25%;
+}
+
+.w-2 {
+  width: 0.5rem;
+}
+
+.w-2\.5 {
+  width: 0.625rem;
+}
+
+.w-4 {
+  width: 1rem;
 }
 
 .max-w-5xl {
@@ -740,6 +764,10 @@ video {
 
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col {
