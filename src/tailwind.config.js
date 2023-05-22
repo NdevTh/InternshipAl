@@ -13,5 +13,14 @@ module.exports = {
   },
   variants:{},
   plugins: [],
+  // tailwind.config.js
+
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  theme: {
+    extend: {},
+  },
+
+
+
 }
 
