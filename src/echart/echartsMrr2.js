@@ -1,142 +1,97 @@
-var app = {};
 
 var chartDom = document.getElementById('mrr2');
 var myChart = echarts.init(chartDom);
 var option;
 
-const categories = (function () {
-  let now = new Date();
-  let res = [];
-  let len = 10;
-  while (len--) {
-    res.unshift(now.toLocaleTimeString().replace(/^\D*/, ''));
-    now = new Date(+now - 2000);
-  }
-  return res;
-})();
-const categories2 = (function () {
-  let res = [];
-  let len = 10;
-  while (len--) {
-    res.push(10 - len - 1);
-  }
-  return res;
-})();
-const data = (function () {
-  let res = [];
-  let len = 10;
-  while (len--) {
-    res.push(Math.round(Math.random() * 1000));
-  }
-  return res;
-})();
-const data2 = (function () {
-  let res = [];
-  let len = 0;
-  while (len < 10) {
-    res.push(+(Math.random() * 10 + 5).toFixed(1));
-    len++;
-  }
-  return res;
-})();
 option = {
   tooltip: {
     trigger: 'axis',
     axisPointer: {
       type: 'cross',
-      label: {
-        backgroundColor: '#283b56'
+      crossStyle: {
+        color: '#999'
       }
     }
   },
-  legend: {},
   toolbox: {
-    show: true,
     feature: {
-      dataView: { readOnly: false },
-      restore: {},
-      saveAsImage: {}
+      dataView: { show: true, readOnly: false },
+      magicType: { show: true, type: ['line', 'bar'] },
+      restore: { show: true },
+      saveAsImage: { show: true }
     }
   },
-  dataZoom: {
-    show: false,
-    start: 0,
-    end: 100
+  legend: {
+    data: ['Evaporation', 'Precipitation', 'Temperature']
   },
   xAxis: [
     {
       type: 'category',
-      boundaryGap: true,
-      data: categories
-    },
-    {
-      type: 'category',
-      boundaryGap: true,
-      data: categories2
+      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      axisPointer: {
+        type: 'shadow'
+      }
     }
   ],
   yAxis: [
     {
       type: 'value',
-      scale: true,
-      name: 'Price',
-      max: 30,
+      name: 'Precipitation',
       min: 0,
-      boundaryGap: [0.2, 0.2]
+      max: 250,
+      interval: 50,
+      axisLabel: {
+        formatter: '{value} ml'
+      }
     },
     {
       type: 'value',
-      scale: true,
-      name: 'Order',
-      max: 1200,
+      name: 'Temperature',
       min: 0,
-      boundaryGap: [0.2, 0.2]
+      max: 25,
+      interval: 5,
+      axisLabel: {
+        formatter: '{value} °C'
+      }
     }
   ],
   series: [
     {
-      name: 'Dynamic Bar',
+      name: 'Evaporation',
       type: 'bar',
-      xAxisIndex: 1,
-      yAxisIndex: 1,
-      data: data
+      tooltip: {
+        valueFormatter: function (value) {
+          return value + ' ml';
+        }
+      },
+      data: [
+        2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3
+      ]
     },
     {
-      name: 'Dynamic Line',
+      name: 'Precipitation',
+      type: 'bar',
+      tooltip: {
+        valueFormatter: function (value) {
+          return value + ' ml';
+        }
+      },
+      data: [
+        2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3
+      ]
+    },
+    {
+      name: 'Temperature',
       type: 'line',
-      data: data2
+      yAxisIndex: 1,
+      tooltip: {
+        valueFormatter: function (value) {
+          return value + ' °C';
+        }
+      },
+      data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 23.0, 16.5, 12.0, 6.2]
     }
   ]
 };
-app.count = 11;
-setInterval(function () {
-  let axisData = new Date().toLocaleTimeString().replace(/^\D*/, '');
-  data.shift();
-  data.push(Math.round(Math.random() * 1000));
-  data2.shift();
-  data2.push(+(Math.random() * 10 + 5).toFixed(1));
-  categories.shift();
-  categories.push(axisData);
-  categories2.shift();
-  categories2.push(app.count++);
-  myChart.setOption({
-    xAxis: [
-      {
-        data: categories
-      },
-      {
-        data: categories2
-      }
-    ],
-    series: [
-      {
-        data: data
-      },
-      {
-        data: data2
-      }
-    ]
-  });
-}, 2100);
 
 option && myChart.setOption(option);
