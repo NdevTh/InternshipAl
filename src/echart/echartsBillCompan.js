@@ -36,11 +36,6 @@ option = {
       left: 'center',
       text: 'Gradient along the y axis'
     },
-    {
-      top: '55%',
-      left: 'center',
-      text: 'Gradient along the x axis'
-    }
   ],
   tooltip: {
     trigger: 'axis'
