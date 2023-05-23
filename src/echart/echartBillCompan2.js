@@ -40,6 +40,9 @@ const data2 = (function () {
   return res;
 })();
 option = {
+  title: {
+    text: 'Dynamic Data'
+  },
   tooltip: {
     trigger: 'axis',
     axisPointer: {
@@ -139,4 +142,4 @@ setInterval(function () {
   });
 }, 2100);
 
-if(option) myChart.setOption(option);
+option && myChart.setOption(option);
