@@ -74,13 +74,6 @@ option = {
       showSymbol: false,
       data: valueList
     },
-    {
-      type: 'line',
-      showSymbol: false,
-      data: valueList,
-      xAxisIndex: 1,
-      yAxisIndex: 1
-    }
   ]
 };
 
