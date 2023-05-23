@@ -22,20 +22,7 @@ option = {
       min: 0,
       max: 400
     },
-    {
-      show: false,
-      type: 'continuous',
-      seriesIndex: 1,
-      dimension: 0,
-      min: 0,
-      max: dateList.length - 1
-    }
-  ],
-  title: [
-    {
-      left: 'center',
-      text: 'Gradient along the y axis'
-    },
+    
   ],
   tooltip: {
     trigger: 'axis'
