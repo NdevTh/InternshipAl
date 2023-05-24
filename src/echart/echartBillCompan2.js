@@ -20,7 +20,7 @@ const categories2 = (function () {
   }
   return res;
 })();
-const data = (function () {
+const data1 = (function () {
   let res = [];
   let len = 10;
   while (len--) {
@@ -109,7 +109,7 @@ option = {
     }
   ]
 };
-app.count = 11;
+// app.count = 11;
 setInterval(function () {
   let axisData = new Date().toLocaleTimeString().replace(/^\D*/, '');
   data.shift();
@@ -119,7 +119,7 @@ setInterval(function () {
   categories.shift();
   categories.push(axisData);
   categories2.shift();
-  categories2.push(app.count++);
+  // categories2.push(app.count++);
   myChart.setOption({
     xAxis: [
       {
