@@ -1,3 +1,4 @@
+
 var chartDom = document.getElementById('bill2');
 var myChart = echarts.init(chartDom);
 var option;
@@ -38,9 +39,7 @@ const data2 = (function () {
   return res;
 })();
 option = {
-  title: {
-    text: 'Dynamic Data'
-  },
+
   tooltip: {
     trigger: 'axis',
     axisPointer: {
@@ -119,7 +118,7 @@ setInterval(function () {
   categories.shift();
   categories.push(axisData);
   categories2.shift();
-  // categories2.push(app.count++);
+
   myChart.setOption({
     xAxis: [
       {
