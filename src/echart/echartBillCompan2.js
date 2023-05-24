@@ -20,7 +20,7 @@ const categories2 = (function () {
   }
   return res;
 })();
-const data = (function () {
+const data1 = (function () {
   let res = [];
   let len = 10;
   while (len--) {
