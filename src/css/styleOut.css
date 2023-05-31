@@ -987,6 +987,14 @@ video {
 }
 
 @media not all and (min-width: 540px) {
+  .max-xs\:flex {
+    display: flex;
+  }
+
+  .max-xs\:hidden {
+    display: none;
+  }
+
   .max-xs\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
