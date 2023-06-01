@@ -11,7 +11,7 @@
 </head>
 <body class="flex flex-col max-w-full ">
   
-  <header class="flex-initial" >
+  <header class="max-xs:flex-col flex-initial" >
     <nav class="flex text-xl items-center justify-between content-center p-4">
         <ul class="max-xs:hidden flex flex-row justify-center items-center p-1">
           <li><a class="block h-9 mx-3.5 text-blue-600 font-bold text-lg" href="./page/sherlock.html"><img class="h-full" src="./image/logoSherlok.svg" alt=""></a>
@@ -26,22 +26,29 @@
          <input class="flex h-12 border rounded-full p-1 text-center " type="search" placeholder="search a company ">
         </div>
         <div class="items-center flex">
-        <div class=" p-1">Welcome, <span class="font-bold px-5">Dany Jennervé</span></div>
-          <button type="submit" class="border text-white h-12 w-24 bg-blue-600 rounded-md">Logout</button>
+        <div class=" max-xs:text-xs  p-1">Welcome, <span class="font-bold px-5">Dany Jennervé</span></div>
+          <button type="submit" class="max-xs:hidden border text-white h-12 w-24 bg-blue-600 rounded-md">
+            Logout
+          </button>
+          <button type="submit" class="max-xs:text-xs md:hidden border text-white h-12 w-24 bg-blue-600 rounded-md">
+            Logout
+          </button>
         </div>
     </nav>
   </header>
   <main class="flex-grow flex-col bg-blue-100 ">
     <!-- The tab part -->
-    <section class=" flex justify-between items-center text-xl pt-4 bg-red-600">
-      <h2 class="font-bold px-8 h-11">
+    <section class=" flex justify-between items-center text-xl pt-4 bg-red-600 ">
+      <h2 class=" font-bold px-8 h-11 max-xs:text-xs ">
         Sherlock Dashboard 
       </h2>
       <!-- mediaQuerie  -->
-      <ul class=" flex h-8 mx-5 items-center pr-3">
+      <ul class=" flex h-8 mx-5 items-center pr-3 ">
         
-        <p class=" pl-3 pr-3" href=""><li class="max-xs:hidden pl-3 pr-3" >Filters</li></p>
-        <section class="max-xs:flex">
+          <p class=" pl-3 pr-3" href="">
+            <li class="max-xs:hidden pl-3 pr-3" >Filters</li>
+          </p>
+        <section class="md:flex">
           <section class="flex">
             <select  class=" m-2 border border-black flex items-center pl-3 h-12 pr-3" name="Region" id="">
               <option  value="Region1">Région1</option>
