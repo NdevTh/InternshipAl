@@ -991,12 +991,28 @@ video {
     display: none;
   }
 
+  .max-xs\:w-auto {
+    width: auto;
+  }
+
+  .max-xs\:flex-none {
+    flex: none;
+  }
+
   .max-xs\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
+  .max-xs\:flex-row {
+    flex-direction: row;
+  }
+
   .max-xs\:flex-col {
     flex-direction: column;
+  }
+
+  .max-xs\:justify-start {
+    justify-content: flex-start;
   }
 
   .max-xs\:text-xs {
