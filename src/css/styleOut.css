@@ -1001,6 +1001,10 @@ video {
     display: none;
   }
 
+  .max-xs\:flex-none {
+    flex: none;
+  }
+
   .max-xs\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
