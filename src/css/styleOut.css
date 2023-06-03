@@ -754,6 +754,10 @@ video {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .place-items-center {
   place-items: center;
 }
@@ -1009,6 +1013,10 @@ video {
 
   .max-xs\:flex-col {
     flex-direction: column;
+  }
+
+  .max-xs\:flex-wrap {
+    flex-wrap: wrap;
   }
 
   .max-xs\:justify-start {
