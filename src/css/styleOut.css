@@ -1015,6 +1015,14 @@ video {
     flex-direction: column;
   }
 
+  .max-xs\:flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .max-xs\:justify-start {
+    justify-content: flex-start;
+  }
+
   .max-xs\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
