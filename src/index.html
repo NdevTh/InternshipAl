@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styleOut.css">
+    <link rel="stylesheet" href="../css/styleOut.css">
     <link rel="stylesheet" href="./css/monStyle.css">
-    <script src="echart/echarts.js"></script> 
-    <script scr="page/pages.js"></script>
+    <script src="./echart/echarts.js"></script> 
+    
     <title>Sherlock</title>
 </head>
 <body class="flex flex-col max-w-full ">
@@ -42,11 +42,10 @@
     <section class="max-xs:flex-none flex justify-between content-center text-xl pt-4 bg-red-600 ">
 
         <h2 class="max-xs:hidden font-bold px-8 h-11 max-xs:text-xs ">
-          Sherlock Dashboard 
+          Sherlock Dashboard
         </h2>
         <!-- mediaQuerie  -->
-        <form class=" flex max-xs:flex-wrap max-xs:justify-start h-8 mx-5 items-center pr-3 ">
-
+      <form class=" flex max-xs:flex-wrap max-xs:justify-start h-8 mx-5 items-center pr-3 ">
           <select  class=" m-2 border border-black flex items-center pl-3 h-12 pr-3" name="Region" id="">
             <option  value="Region1">Région1</option>
             <option value="Region2">Region2</option>
@@ -96,8 +95,7 @@
             <option value="KAM3">KAM 3</option>
             <option value="KAM4">KAM 4</option>
           </select>
-   
-    </form>
+      </form>
 
     </section> 
  <!-------- Start Graph part  ------>
@@ -173,5 +171,6 @@
 <!--------  End part  ------>
 
   </main>
+  <script scr="page/pages.js"></script>
 </body>
 </html>
