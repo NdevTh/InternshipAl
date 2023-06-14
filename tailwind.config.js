@@ -9,7 +9,13 @@ module.exports = {
       ...defaultTheme.screens,
     },
 
-    extend: {},
+    extend: {
+      spacing :{
+        'some_key' :{
+          '1,5' : 'value',
+        }   
+      },
+    },
   },
   variants:{},
   plugins: [],
