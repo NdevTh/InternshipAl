@@ -3,12 +3,13 @@
 module.exports = {
   content: ["./**/*.{html,js}",
             "./index.html",
+            "./**/*.css",
           ],  
             
   theme: 
   {
     // screens :{
-    //   // xs :"540px",
+    //   xs :"540px",
     //   ...defaultTheme.screens,
     // },
 
