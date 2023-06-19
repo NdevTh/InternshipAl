@@ -5,21 +5,21 @@ module.exports = {
             "./index.html",
           ],  
             
-  // theme: 
-  // {
-  //   // screens :{
-  //   //   // xs :"540px",
-  //   //   ...defaultTheme.screens,
-  //   // },
+  theme: 
+  {
+    // screens :{
+    //   // xs :"540px",
+    //   ...defaultTheme.screens,
+    // },
 
-  //   extend: {
-  //     spacing :{
-  //       'some_key' :{
-  //         '1,5' : 'value',
-  //       }   
-  //     },
-  //   },
-  // },
+    extend: {
+      spacing :{
+        'some_key' :{
+          '1.5' : 'value',
+        }   
+      },
+    },
+  },
   variants:{},
   plugins: [],
 }
