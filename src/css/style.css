@@ -4,9 +4,14 @@
 @tailwind utilities;
 
 @layer utilities{
-  
+  .custom-utility{
+
+  }
 }
+
 @layer components{
  
+ .custom-component{
     
+ }   
 }
