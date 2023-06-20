@@ -12,8 +12,8 @@
     <title>Sherlock</title>
 </head>
 <body class="flex flex-col max-w-full ">
-  
-  <header class="max-xs:flex-wrap flex-initial" >
+  <!-- it's resolve this part -->
+  <header class="fixed bg-white w-full z-30 max-xs:flex-wrap flex-initial" >
     <nav class="flex text-xl items-center justify-between content-center p-4">
         <ul class="max-xs:hidden flex justify-center items-center p-1">
           <li><a class="block h-9 mx-3.5 text-blue-600 font-bold text-lg" href="./page/sherlock.html"><img class="h-full" src="./image/logoSherlok.svg" alt=""></a>
@@ -46,9 +46,12 @@
         </div>
     </nav>
   </header>
-  <main class="flex-grow flex-col bg-blue-100 ">
+    <!-- it's resolve this part -->
+
+  
+  <main class="mt-24 flex-grow flex-col bg-blue-100 ">
     <!-- The tab part -->
-    <section class="max-xs:flex-none flex justify-between content-center text-xl pt-4  ">
+    <section class="max-xs:flex-none flex justify-between content-center text-xl pt-4 ">
 
         <h2 class="max-xs:hidden font-bold px-8 h-11 max-xs:text-xs ">
           Sherlock Dashboard 
@@ -107,6 +110,8 @@
       </form>
 
     </section> 
+
+
  <!-------- Start Graph part  ------>
     <section class=" pt-20 px-8 grid max-xs:grid-cols-1 max-sm:grid-cols-2 md:grid-cols-4">
        <article  class="h-80 font-bold  flex flex-col m-3 border border-black bg-white items-center " >
