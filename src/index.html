@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/styleOut.css">
-    <!-- <link rel="stylesheet" href="./css/styleOut2.css"> -->
+    <link rel="stylesheet" href="./css/monStyle.css">
+    <!-- <link rel="stylesheet" href="./css/styleOut.css"> -->
+    <link rel="stylesheet" href="./css/styleOut2.css">
     <!-- <link rel="stylesheet" href="./styleOut.css"> -->
     <script src="./echart/echarts.js"></script> 
     
@@ -16,7 +17,7 @@
   
   <header class="max-xs:flex-wrap flex-initial" >
     <nav class="flex text-xl items-center justify-between content-center p-4">
-        <ul class="max-xs:hidden flex flex-row justify-center items-center p-1">
+        <ul class="max-xs:hidden flex justify-center items-center p-1">
           <li><a class="block h-9 mx-3.5 text-blue-600 font-bold text-lg" href="./page/sherlock.html"><img class="h-full" src="./image/logoSherlok.svg" alt=""></a>
           </li>
           <li><a class="mx-3.5 text-blue-600 font-bold text-lg"href="./page/trial.html">Trial</a></li>
@@ -24,10 +25,9 @@
           <li><a class="mx-3.5 text-blue-600 font-bold text-lg" href="./page/products.html">Products</a></li>
           <li><a class="mx-3.5 text-blue-600 font-bold text-lg" href="./page/glossary.html">Glossary</a></li>
         </ul>
-        <button type=" button" aria-label="toggle curtain navigation" class="nav flex flex-col">
-
+        <button type="button"  class="sm:hidden">
           <!-- menu burger en svg  -->
-          <svg width="24" height="24">
+          <svg  width="24" height="24">
             <path d="M5 6h14M5 12h14M5 18h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
            </path>
           </svg>
@@ -56,7 +56,7 @@
           Sherlock Dashboard 
         </h2>
         <!-- mediaQuerie  -->
-      <form class=" flex max-xs:flex-wrap max-xs:justify-start h-8 mx-5 items-center pr-3 ">
+      <form class="flex max-xs:flex-wrap max-xs:justify-start h-8 mx-5 items-center pr-3 ">
           <select  class=" m-2 border border-black flex items-center pl-3 h-12 pr-3" name="Region" id="">
             <option  value="Region1">Région1</option>
             <option value="Region2">Region2</option>
@@ -178,10 +178,12 @@
           </div>
       </article>
 
-      </section>
+    </section>
 <!--------  End part  ------>
 
   </main>
+
+
   <script scr="page/pages.js"></script>
 
 </body>
