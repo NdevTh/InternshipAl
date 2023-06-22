@@ -681,6 +681,10 @@ video {
   z-index: 30;
 }
 
+.z-auto {
+  z-index: auto;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -763,6 +767,16 @@ video {
 .mx-5 {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
+}
+
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .mb-4 {
@@ -2009,6 +2023,11 @@ video {
   background-color: rgb(148 163 184 / var(--tw-bg-opacity));
 }
 
+.bg-slate-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+}
+
 .bg-violet-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(124 58 237 / var(--tw-bg-opacity));
@@ -2780,44 +2799,6 @@ video {
   }
 }
 
-@media (min-width: 540px) {
-  .xs\:col-span-2 {
-    grid-column: span 2 / span 2;
-  }
-
-  .xs\:col-start-2 {
-    grid-column-start: 2;
-  }
-
-  .xs\:row-start-2 {
-    grid-row-start: 2;
-  }
-
-  .xs\:grid {
-    display: grid;
-  }
-
-  .xs\:h-auto {
-    height: auto;
-  }
-
-  .xs\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .xs\:gap-4 {
-    gap: 1rem;
-  }
-
-  .xs\:self-center {
-    align-self: center;
-  }
-
-  .xs\:p-8 {
-    padding: 2rem;
-  }
-}
-
 @media (min-width: 640px) {
   .sm\:hidden {
     display: none;
@@ -2829,50 +2810,37 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:col-span-2 {
-    grid-column: span 2 / span 2;
+  .md\:static {
+    position: static;
   }
 
-  .md\:col-span-3 {
-    grid-column: span 3 / span 3;
+  .md\:z-auto {
+    z-index: auto;
   }
 
-  .md\:col-start-1 {
-    grid-column-start: 1;
+  .md\:my-6 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
-  .md\:col-start-2 {
-    grid-column-start: 2;
+  .md\:flex {
+    display: flex;
   }
 
   .md\:hidden {
     display: none;
   }
 
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .md\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .md\:items-center {
+    align-items: center;
   }
 
-  .md\:pr-12 {
-    padding-right: 3rem;
-  }
-
-  .md\:text-center {
-    text-align: center;
-  }
-
-  .md\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
+  .md\:justify-between {
+    justify-content: space-between;
   }
 }
 
