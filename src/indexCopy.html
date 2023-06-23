@@ -6,37 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/monStyle.css">
-    <link rel="stylesheet" href="./css/styleOutCopy.css">
+    <link rel="stylesheet" href="./css/styleOut.css">
     <script src="./echart/echarts.js"></script> 
-
-    <title>SherlockCopy</title>
+    
+    <title>Sherlock</title>
 </head>
 <body class="flex flex-col max-w-full ">
   <!-- it's resolve this part -->
-  <header class="items-center md:justify-between fixed bg-white w-full z-30 max-xs:flex-wrap flex-initial" >
-    <nav class=" flex text-xl items-center justify-between content-center p-4">
+  <header class="fixed bg-white w-full z-30 max-xs:flex-wrap flex-initial" >
+    <nav class="flex text-xl items-center justify-between content-center p-4">
         <ul class="max-xs:hidden flex justify-center items-center p-1">
-          <li class="mx-4 my-6 md:my-6" ><a class="block h-9 mx-3.5 text-blue-600 font-bold text-lg" href="./page/sherlock.html"><img class="h-full" src="./image/logoSherlok.svg" alt=""></a>
+          <li><a class="block h-9 mx-3.5 text-blue-600 font-bold text-lg" href="./page/sherlock.html"><img class="h-full" src="./image/logoSherlok.svg" alt=""></a>
           </li>
           <li><a class="mx-3.5 text-blue-600 font-bold text-lg"href="./page/trial.html">Trial</a></li>
           <li><a class="mx-3.5 text-blue-600 font-bold text-lg"href="./page/renewal.html">Renewal</a></li>
           <li><a class="mx-3.5 text-blue-600 font-bold text-lg" href="./page/products.html">Products</a></li>
           <li><a class="mx-3.5 text-blue-600 font-bold text-lg" href="./page/glossary.html">Glossary</a></li>
         </ul>
-<!-- class button with css: fixed z-10 top-7 left-7 h-12 w-12 cursor-pointer flex justify-center items-center bg-transparent  -->
-
-        <button type="button"  aria-label="toggle curtain navigation" class="
-         sm:hidden">
-
-         <!-- menu burger css -->
-          <!-- <span class="absolute block w-full h-1 bg-black ease-out opacity-100 translate-y-2 l1">
-          </span><span class="absolute block w-full h-1 bg-black ease-out opacity-100 l2">
-          </span><span class="absolute block w-full h-1 bg-black ease-out opacity-100 translate-y-4 l3">
-          </span> -->
-          <!-- menu burger css -->
-
+        <button type="button"  class="sm:hidden">
           <!-- menu burger en svg  -->
-          <svg name="menu" onclick="Menu(this)" width="24" height="24">
+          <svg  width="24" height="24">
             <path d="M5 6h14M5 12h14M5 18h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
            </path>
           </svg>
@@ -55,21 +44,14 @@
             Logout
           </button>
         </div>
-<!-- nav part curtain -->
-<!-- nav part curtain -->
-
-
     </nav>
-    
-   
-   
   </header>
     <!-- it's resolve this part -->
 
   
   <main class="mt-24 flex-grow flex-col bg-blue-100  ">
     <!-- The tab part -->
-    <section class=" max-xs:hidden flex justify-between content-center text-xl pt-4 ">
+    <section class="max-xs:flex-none flex justify-between content-center text-xl pt-4 ">
 
         <h2 class="max-xs:hidden font-bold px-8 h-11 max-xs:text-xs ">
           Sherlock Dashboard 
@@ -205,9 +187,7 @@
   </main>
 
 
-  <script>
-
-</script>
+  <script scr="page/pages.js"></script>
 
 </body>
 </html>
