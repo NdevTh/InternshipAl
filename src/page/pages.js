@@ -1,1 +1,1 @@
-const MenuBurger = onclick
+const menuCurtain = onclick
