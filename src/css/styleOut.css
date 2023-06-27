@@ -622,10 +622,6 @@ video {
   z-index: 30;
 }
 
-.z-0 {
-  z-index: 0;
-}
-
 .m-2 {
   margin: 0.5rem;
 }
@@ -882,11 +878,6 @@ video {
 .ordinal {
   --tw-ordinal: ordinal;
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
-}
-
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-blue-600 {
