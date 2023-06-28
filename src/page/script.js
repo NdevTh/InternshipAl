@@ -1,3 +1,7 @@
+
+const curtain (){
+
+
 // Get reference  to the elements
 const button = document.getElementById("showMenu");
 const menu = document.getElementById("menuCurtain");
@@ -10,6 +14,8 @@ function handleClick(){
 
 // Add click event listener to the button
 button.addEventListener("click",handleClick);
+
+}
 
 function generateSelects() {
     // Définir les valeurs d'options pour chaque select
