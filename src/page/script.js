@@ -46,13 +46,13 @@ const section = document.querySelector(".max-xs\\:hidden.flex.justify-between.co
 
 // Create the form element
 const form = document.createElement("form");
-form.classList.add("flex", "max-xs:flex-wrap", "max-xs:justify-start", "h-8", "mx-5", "items-center", "pr-3");
+form.classList.add("flex", "max-xs:flex-wrap", "max-xs:justify-start", "h-full", "mx-5", "items-center", "pr-3");
 
 // Iterate over the select options
 selectOptions.forEach((options) => {
 // Create the select element
 const select = document.createElement("select");
-select.classList.add("m-2", "border", "border-black", "flex", "items-center", "pl-3", "h-12", "pr-3");
+select.classList.add("m-2", "border", "border-black", "flex", "items-center", "pl-3", "h-full", "pr-3");
 
 // Iterate over the options for each select
 options.forEach((option) => {
