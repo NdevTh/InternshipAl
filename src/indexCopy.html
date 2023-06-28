@@ -8,14 +8,30 @@
     <link rel="stylesheet" href="./css/monStyle.css">
     <link rel="stylesheet" href="./css/styleOut.css">
     <script src="./echart/echarts.js"></script> 
+    <script src="../page/script.js" ></script>
     
     <title>SherlockCppy</title>
 </head>
-<body class="flex flex-col max-w-full ">
+<body class="flex flex-row max-w-full ">
+      <!--start part curtain -->
+      <ul id="menuCurtain" name="menuCurtain" class="hidden sm:hidden h-full fixed bg-blue-900 z-50 justify-center items-center p-1">
+        <li><a class="block h-9 mx-3.5 text-blue-600 font-bold text-lg" href="./page/sherlock.html"><img class="h-full" src="./image/logoSherlok.svg" alt=""></a>
+        </li>
+        <li><a class="mx-3.5 text-white "href="./page/trial.html">Trial</a></li>
+        <li><a class="mx-3.5 text-white "href="./page/renewal.html">Renewal</a></li>
+        <li><a class="mx-3.5 text-white " href="./page/products.html">Products</a></li>
+        <li><a class="mx-3.5 text-white " href="./page/glossary.html">Glossary</a></li>
+        <li class="text-white" >___________________</li>
+
+
+      </ul>
+  
+<!--end part curtain -->
+
   <!-- it's resolve this part -->
-  <header class="fixed bg-white w-full z-30 max-xs:flex-wrap flex-initial" >
+  <header class="fixed bg-white w-full z-40 max-xs:flex-wrap flex-initial" >
     <nav class="flex text-xl items-center justify-between content-center p-4">
-        <ul class="max-xs:hidden flex justify-center items-center p-1">
+        <ul name="menuCurtain" class="max-xs:hidden flex justify-center items-center p-1">
           <li><a class="block h-9 mx-3.5 text-blue-600 font-bold text-lg" href="./page/sherlock.html"><img class="h-full" src="./image/logoSherlok.svg" alt=""></a>
           </li>
           <li><a class="mx-3.5 text-blue-600 font-bold text-lg"href="./page/trial.html">Trial</a></li>
@@ -23,7 +39,9 @@
           <li><a class="mx-3.5 text-blue-600 font-bold text-lg" href="./page/products.html">Products</a></li>
           <li><a class="mx-3.5 text-blue-600 font-bold text-lg" href="./page/glossary.html">Glossary</a></li>
         </ul>
-        <button type="button"  class="sm:hidden">
+
+    
+        <button id="showMenu" type="button"  class="sm:hidden">
           <!-- menu burger en svg  -->
           <svg  width="24" height="24">
             <path d="M5 6h14M5 12h14M5 18h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
@@ -33,7 +51,7 @@
         </button>
         <div class="flex text-center rounded-full p-1">         
          <!-- <img class="max-w-full h-auto" src="./image/loupe.png" alt=""></img> -->
-         <input class="flex h-12 border rounded-full p-1 text-center " type="search" placeholder="search a company ">
+         <input class="flex max-xs:hidden h-12 border rounded-full p-1 text-center " type="search" placeholder="search a company ">
         </div>
         <div class="items-center flex">
         <div class=" max-xs:hidden  p-1">Welcome, <span class="font-bold px-5">Dany Jennervé</span></div>
@@ -47,17 +65,7 @@
     </nav>
   </header>
     <!-- it's resolve this part -->
-<!--start part curtain -->
-        <ul name="menuCurtain" class="max-xs:flex-row max-xs:w-full h-full bg-red-600 z-30 justify-center items-center p-1">
-        <li><a class="block h-9 mx-3.5 text-blue-600 font-bold text-lg" href="./page/sherlock.html"><img class="h-full" src="./image/logoSherlok.svg" alt=""></a>
-        </li>
-        <li><a class="mx-3.5 text-blue-600 font-bold text-lg"href="./page/trial.html">Trial</a></li>
-        <li><a class="mx-3.5 text-blue-600 font-bold text-lg"href="./page/renewal.html">Renewal</a></li>
-        <li><a class="mx-3.5 text-blue-600 font-bold text-lg" href="./page/products.html">Products</a></li>
-        <li><a class="mx-3.5 text-blue-600 font-bold text-lg" href="./page/glossary.html">Glossary</a></li>
-      </ul>
-  
-<!--end part curtain -->
+
   
   <main class="mt-24 flex-grow flex-col bg-blue-100  ">
     <!-- The tab part -->
@@ -67,7 +75,7 @@
           Sherlock Dashboard 
         </h2>
         <!-- mediaQuerie  -->
-      <form class=" flex max-xs:flex-wrap max-xs:justify-start h-8 mx-5 items-center pr-3 ">
+      <form name="" class=" flex max-xs:flex-wrap max-xs:justify-start h-8 mx-5 items-center pr-3 ">
           <select  class=" m-2 border border-black flex items-center pl-3 h-12 pr-3" name="Region" id="">
             <option  value="Region1">Région1</option>
             <option value="Region2">Region2</option>
@@ -123,12 +131,12 @@
 
 
  <!-------- Start Graph part  ------>
-    <section class=" pt-20 px-8 grid max-xs:grid-cols-1 max-sm:grid-cols-2 md:grid-cols-4">
+    <section class="z-0 pt-20 px-8 grid max-xs:grid-cols-1 max-sm:grid-cols-2 md:grid-cols-4">
        <article  class="h-80 font-bold  flex flex-col m-3 border border-black bg-white items-center " >
         <h3 class=" justify-center" >
       MMR 
         </h3>
-        <div id="mrr" class="h-80 w-full m-2 mx-2 px-2 "> 
+        <div id="mrr" class=" h-80 w-full m-2 mx-2 px-2 "> 
           <script  src="./echart/echartMrr.js">
           </script>
         </div>         
@@ -197,7 +205,18 @@
   </main>
 
 
-  <script scr="page/pages.js"></script>
+  <script scr="./page/script.js">// Get reference  to the elements
+    const button = document.getElementById("showMenu");
+    const menu = document.getElementById("menuCurtain");
+    
+    // Function to handle button clic
+    function handleClick(){
+        // Toggle the "hidden" class one the menu - add it if visible, remove it if hidden
+        menu.classList.toggle("hidden");
+    }
+    
+    // Add click event listener to the button
+    button.addEventListener("click",handleClick);</script>
 
 </body>
 </html>

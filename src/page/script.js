@@ -1,3 +1,16 @@
+// Get reference  to the elements
+const button = document.getElementById("showMenu");
+const menu = document.getElementById("menuCurtain");
+
+// Function to handle button clic
+function handleClick(){
+    // Toggle the "hidden" class one the menu - add it if visible, remove it if hidden
+    menu.classList.toggle("hidden");
+}
+
+// Add click event listener to the button
+button.addEventListener("click",handleClick);
+
 function generateSelects() {
     // Définir les valeurs d'options pour chaque select
     const selectOptions = [
@@ -37,3 +50,5 @@ function generateSelects() {
 // Utilisation de la fonction
 let form = generateSelects();
 document.body.appendChild(form); // Ajoutez le formulaire au corps du document
+
+
