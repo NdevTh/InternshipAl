@@ -71,3 +71,5 @@ form.appendChild(select);
 
 // Append the form to the section
 section.appendChild(form);
+
+// end function automatised onglet
