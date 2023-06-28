@@ -5,7 +5,7 @@
   "main": "tailwind.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "postcss -w ./src/css/styleOut.css -o ./src/css/styleClean.css"
+    "build": "postcss -w dist/styleOut.css -o css/style.css"
   },
   "keywords": [],
   "author": "",
