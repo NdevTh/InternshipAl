@@ -14,7 +14,9 @@
 </head>
 <body class="flex flex-row max-w-full ">
       <!--start part curtain -->
-      <ul id="menuCurtain" name="menuCurtain" class="hidden sm:hidden h-full fixed bg-blue-900 z-50 justify-center items-center p-1">
+      
+      <section id="menuCurtain" name="menuCurtain" class="hidden flex-row sm:hidden h-full fixed bg-blue-900 z-50 justify-center items-center p-1">
+      <ul class="flex-col">
         <li><a class="block h-9 mx-3.5 text-blue-600 font-bold text-lg" href="./page/sherlock.html"><img class="h-full" src="./image/logoSherlok.svg" alt=""></a>
         </li>
         <li><a class="mx-3.5 text-white "href="./page/trial.html">Trial</a></li>
@@ -22,9 +24,11 @@
         <li><a class="mx-3.5 text-white " href="./page/products.html">Products</a></li>
         <li><a class="mx-3.5 text-white " href="./page/glossary.html">Glossary</a></li>
         <li class="text-white" >___________________</li>
-
-
       </ul>
+      <button id="closeCurtain" class="flex-row" >
+      <img class="h-full" src="./image/cross.svg" >
+    </button>
+    </section>
   
 <!--end part curtain -->
 
@@ -216,7 +220,22 @@
     }
     
     // Add click event listener to the button
-    button.addEventListener("click",handleClick);</script>
+    button.addEventListener("click",handleClick);
+    
+// Get references to the elements
+const menuCurtain = document.getElementById("menuCurtain");
+const closeCurtainButton = document.getElementById("closeCurtain");
+
+// Function to hide the menu curtain
+function hideMenuCurtain() {
+  menuCurtain.classList.add("hidden");
+}
+
+// Add click event listener to the close curtain button
+closeCurtainButton.addEventListener("click", hideMenuCurtain);
+
+
+    </script>
 
 </body>
 </html>
