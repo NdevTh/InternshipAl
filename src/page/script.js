@@ -1,39 +1,75 @@
-function generateSelects() {
-    // Définir les valeurs d'options pour chaque select
-    const selectOptions = [
-        {name: 'Region', values: ['Region1', 'Region2', 'Region3', 'Region4']},
-        {name: 'Cluster', values: ['Cluster1', 'Cluster2', 'Cluster3', 'Cluster4']},
-        {name: 'Country', values: ['Country1', 'Country2', 'Country3', 'Country4']},
-        {name: 'State', values: ['State1', 'State2', 'State3', 'State4']},
-        {name: 'BP', values: ['bp1', 'bp2', 'bp3', 'bp4']},
-        {name: 'BP2', values: ['bp21', 'bp22', 'bp23', 'bp24']},
-        {name: 'CSM', values: ['CSM1', 'CSM2', 'CSM3', 'CSM4']},
-        {name: 'KAM', values: ['KAM1', 'KAM2', 'KAM3', 'KAM4']}
-    ];
 
-    let form = document.createElement('form');
-    form.className = "flex max-xs:flex-wrap max-xs:justify-start h-8 mx-5 items-center pr-3";
+    // <!-- Start for menuCurtain -->
 
-    // Créez chaque select en boucle
-    for (let i = 0; i < selectOptions.length; i++) {
-        let select = document.createElement('select');
-        select.className = "m-2 border border-black flex items-center pl-3 h-12 pr-3";
-        select.name = selectOptions[i].name;
+  // Get reference  to the elements
+  const button = document.getElementById("showMenu");
+  const menu = document.getElementById("menuCurtain");
+  
+  // Function to handle button clic
+  function handleClick(){
+      // Toggle the "hidden" class one the menu - add it if visible, remove it if hidden
+      menu.classList.toggle("hidden");
+  }
+  
+  // Add click event listener to the button
+  button.addEventListener("click",handleClick);
+      
+  // Get references to the elements
+  const menuCurtain = document.getElementById("menuCurtain");
+  const closeCurtainButton = document.getElementById("closeCurtain");
 
-        // Créez chaque option en boucle
-        for (let j = 0; j < selectOptions[i].values.length; j++) {
-            let option = document.createElement('option');
-            option.value = selectOptions[i].values[j];
-            option.textContent = selectOptions[i].values[j];
-            select.appendChild(option);
-        }
+  // Function to hide the menu curtain
+  function hideMenuCurtain() {
+    menuCurtain.classList.add("hidden");
+  }
 
-        form.appendChild(select);
-    }
+  // Add click event listener to the close curtain button
+  closeCurtainButton.addEventListener("click", hideMenuCurtain);
 
-    return form;
-}
+  // <!-- end menuCurtain -->
 
-// Utilisation de la fonction
-let form = generateSelects();
-document.body.appendChild(form); // Ajoutez le formulaire au corps du document
+// automatisated onglet 
+// Array of select options
+const selectOptions = [
+["Région1", "Région2", "Région3", "Région4"],
+["Cluster1", "Cluster2", "Cluster3", "Cluster4"],
+["Country 1", "Country 2", "Country 3", "Country 4"],
+["State 1", "State 2", "State 3", "State 4"],
+["BP-1 1", "BP-1 2", "BP-1 3", "BP-1 4"],
+["BP-21 1", "BP-21 2", "BP-21 3", "BP-21 4"],
+["CSM 1", "CSM 2", "CSM 3", "CSM 4"],
+["KAM 1", "KAM 2", "KAM 3", "KAM 4"]
+];
+
+// Get the section element
+const section = document.querySelector(".max-xs\\:hidden.flex.justify-between.content-center.text-xl.pt-4");
+
+// Create the form element
+const form = document.createElement("form");
+form.classList.add("flex", "max-xs:flex-wrap", "max-xs:justify-start", "h-full", "mx-5", "items-center", "pr-3");
+
+// Iterate over the select options
+selectOptions.forEach((options) => {
+// Create the select element
+const select = document.createElement("select");
+select.classList.add("m-2", "border", "border-black", "flex", "items-center", "pl-3", "h-full", "pr-3");
+
+// Iterate over the options for each select
+options.forEach((option) => {
+  // Create the option element
+  const optionElem = document.createElement("option");
+  optionElem.value = option;
+  optionElem.textContent = option;
+  
+  // Append the option to the select element
+  select.appendChild(optionElem);
+});
+
+// Append the select element to the form
+form.appendChild(select);
+});
+
+// Append the form to the section
+section.appendChild(form);
+
+// end function automatised onglet
